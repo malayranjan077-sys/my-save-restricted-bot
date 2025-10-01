@@ -156,12 +156,6 @@ async def link_handler(client, message: Message):
         await message.reply(f"Error: {str(e)[:100]}")
 
 # Run bot
-async def main():
-    print("Starting bot...")
-    await app.start()
-    print("Bot is running! Send commands to @YourBotName.")
-    await app.idle()
-
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    print("Starting bot...")
+    app.run()
